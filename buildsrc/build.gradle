@@ -1,0 +1,33 @@
+apply plugin: 'groovy'
+apply plugin: 'kotlin'
+
+buildscript {
+    ext.kotlin_version = '1.1.2-4'
+    ext.gradle_version = '2.3.2'
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    // groovy sdk
+    compile localGroovy()
+    // gradle sdk
+    compile gradleApi()
+    compile "com.android.tools.build:gradle:$gradle_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'org.ow2.asm:asm:5.0.3'
+    compile 'org.ow2.asm:asm-commons:5.0.3'
+
+}
