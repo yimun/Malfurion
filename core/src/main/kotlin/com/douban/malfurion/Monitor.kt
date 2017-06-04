@@ -74,5 +74,4 @@ object Monitor {
     fun setUserVisibleHint(fragment: Fragment) {
 
     }
-
 }
