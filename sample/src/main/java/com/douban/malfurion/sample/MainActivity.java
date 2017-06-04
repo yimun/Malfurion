@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.douban.frodo.subject.activity.MovieShowingActivity;
+
 /**
  * Created by linwei on 2017/6/4.
  */
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 System.out.println("button clicked");
+                MovieShowingActivity.startActivity(MainActivity.this);
             }
         });
     }

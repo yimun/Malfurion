@@ -44,8 +44,7 @@ uploadArchives {
             // repository(url: "http://www.xxx.com/repos") {
             //    authentication(userName: "admin", password: "admin")
             // }
-            //本地的Maven地址设置为D:/repos
-            repository(url: uri('../buildrepos'))
+            repository(url: uri('/tmp/repos'))
         }
     }
 }
