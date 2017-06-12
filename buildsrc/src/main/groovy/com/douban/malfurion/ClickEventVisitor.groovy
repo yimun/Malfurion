@@ -40,12 +40,6 @@ class ClickEventVisitor extends ClassVisitor {
                 mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println",
                         "(Ljava/lang/String;)V", false)
 
-                // System.out.println(view);
-                mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;")
-                mv.visitVarInsn(ALOAD, 1)
-                mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println",
-                        "(Ljava/lang/Object;)V", false)
-
                 // Monitor.INSTANCE.onViewClick(view)
                 mv.visitFieldInsn(GETSTATIC, "com/douban/malfurion/Monitor", "INSTANCE", "Lcom/douban/malfurion/Monitor;")
                 mv.visitVarInsn(ALOAD, 1)

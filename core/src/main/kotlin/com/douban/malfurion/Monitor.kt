@@ -5,6 +5,7 @@ import android.app.Fragment
 import android.content.ContextWrapper
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 
 /**
  * Created by linwei on 2017/5/22.
@@ -16,8 +17,13 @@ object Monitor {
 
     fun onViewClick(view: View) {
         val path = getViewPath(view)
+        // TODO
         currentActivityName = getActivityName(view)
-        println("$currentActivityName:$path")
+        var text = ""
+        if (view is TextView) {
+            text = view.text.toString()
+        }
+        println("path:{$currentActivityName:$path}  content:{$text}")
     }
 
     fun getViewPath(v: View): String {

@@ -1,0 +1,12 @@
+//第一部分：描述
+PageName:MainActivity
+ViewPath:DecorView/.../ViewPager[0]/ButtonFragment[0]/AppCompatButton[0]
+EventType:ViewClick
+//第二部分：数据路径（当描述符合时，按照此路径取数据）
+DataPath:this.context.demoList[5]
+
+/*
+1. 当页面(MainActivity) 中的控件（DecorView/.../ViewPager[0]/ButtonFragment[0]/AppCompatButton[0]）发生点击事件（ViewClick）时
+4. 按照路径（this.context.demoList[5]）取出数据
+5. 并附加到点击事件上面一起上报
+*/
